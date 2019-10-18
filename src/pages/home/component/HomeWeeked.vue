@@ -61,7 +61,6 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl';
   .title
-    margin-top .2rem
     line-height .8rem
     background #eeeeee
     text-indent .2rem
