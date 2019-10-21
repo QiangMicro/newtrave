@@ -13,6 +13,9 @@
 </template>
 <script>
 export default {
+  props:{
+    swiperList:Array
+  },
   name:'HomeSwiper',
   data(){
     return{
@@ -20,13 +23,6 @@ export default {
         loop: true,
         pagination: '.swiper-pagination'
       },
-      swiperList:[{
-        id:'001',
-        imgeUrl:'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/201910/78b240572657a6da67e662540c846dd6.jpg_750x200_b75c8be9.jpg'
-      },{
-        id:'002',
-        imgeUrl:'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20198/06e65ace8dce3638e847b04e975489d1.jpg_750x200_a2dcb0a4.jpg'
-      }]
     }
   }
 }
