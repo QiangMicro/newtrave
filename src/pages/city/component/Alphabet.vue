@@ -1,17 +1,13 @@
 <template>
-  <ul class="list">
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
+  <ul class="list" >
+    <li class="item" v-for='(item,key) of cities' :key='key'>{{key}}</li>
   </ul>
 </template>
 <script>
 export default {
+  props:{
+    cities:Object
+  },
   name:'CityAlphabet'
 }
 </script>
@@ -19,7 +15,7 @@ export default {
 @import '~styles/varibles.styl';
   .list
     position relative
-    top  3rem
+    top 1.58rem
     right -7.2rem
     bottom 0
     line-height .4rem
