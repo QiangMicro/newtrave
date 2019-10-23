@@ -3,18 +3,21 @@
     <CityHeader></CityHeader>
     <CitySearch></CitySearch>
     <CityList></CityList>
+    <CityAlphabet></CityAlphabet>
   </div>
 </template>
 <script>
 import CityHeader from './component/CityHeader'
 import CitySearch from './component/Search'
 import CityList from './component/List'
+import CityAlphabet from './component/Alphabet'
 export default {
   name:'City',
   components:{
     CityHeader,
     CitySearch,
-    CityList
+    CityList,
+    CityAlphabet
   }
 }
 </script>
