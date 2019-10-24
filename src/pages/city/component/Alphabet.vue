@@ -14,10 +14,13 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl';
   .list
+    width .5rem
+    background red
     position relative
-    top 1.58rem
-    right -7.2rem
-    bottom 0
+    right -7.58rem
+    // top 1.58rem
+    // right -7.2rem
+    // bottom 0
     line-height .4rem
     font-size .3rem
     .item
