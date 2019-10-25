@@ -14,15 +14,17 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl';
   .list
-    width .5rem
-    background red
-    position relative
-    right -7.58rem
-    // top 1.58rem
-    // right -7.2rem
-    // bottom 0
-    line-height .4rem
-    font-size .3rem
-    .item
-      color  $bgColor
+    display  flex
+    flex-direction column
+    justify-content center
+    position  absolute
+    top .58rem 
+    right 0
+    bottom  0
+    width .4rem
+    .item 
+      text-align center
+      color $bgColor
+      line-height .4rem
+
 </style>
