@@ -2,8 +2,8 @@
   <div>
     <CityHeader></CityHeader>
     <CitySearch></CitySearch>
-    <CityList :hotCities='hotCities' :cities='cities'></CityList>
-    <CityAlphabet :cities='cities'></CityAlphabet>
+    <CityList :hotCities='hotCities' :cities='cities' :list='list' ></CityList>
+    <CityAlphabet :cities='cities' @change='changeList'></CityAlphabet>
   </div>
 </template>
 <script>
@@ -23,7 +23,8 @@ export default {
   data(){
     return{
       hotCities:[],
-      cities:{}
+      cities:{},
+      list:''
     }
   },
   methods:{
@@ -40,6 +41,9 @@ export default {
         this.hotCities=data.hotCities
         this.cities=data.cities
       }     
+    },
+    changeList(item){
+      this.list=item
     }
   },
   mounted(){

@@ -20,7 +20,7 @@
         </div>
       </div> 
       <!-- 首写字母 -->
-      <div class="area" v-for='(item,key) of cities' :key='key' >
+      <div class="area" v-for='(item,key) of cities' :key='key' :ref='key' >
         <div class="title border-topbottom" >{{key}}</div>
         <div class="item-list" v-for='itemHtml of item' :key='itemHtml.id'>
           <div class="item border-bottom">{{itemHtml.name}}</div>
@@ -34,11 +34,21 @@ import BScroll from 'better-scroll'
 export default {
   props:{
     hotCities:Array,
-    cities:Object
+    cities:Object,
+    list:String
   },
   name:"CityList",
   mounted(){
     this.scroll=new BScroll(this.$refs.wrapper)
+  },
+  watch:{
+    list(){
+      // 如果侧列表传过值则同步到列表页的大写字母处
+      if(this.list){
+        const value=this.$refs[this.list][0]
+        this.scroll.scrollToElement(value)
+      }
+    }
   }
 }
 </script>
