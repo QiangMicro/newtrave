@@ -1,6 +1,6 @@
 <template>
   <ul class="list" >
-    <li class="item" v-for='(item,key) of cities' :key='key'>{{key}}</li>
+    <li class="item" v-for='(item,key) of cities' :key='key' @click="handClick">{{key}}</li>
   </ul>
 </template>
 <script>
@@ -8,7 +8,13 @@ export default {
   props:{
     cities:Object
   },
-  name:'CityAlphabet'
+  name:'CityAlphabet',
+  methods:{
+    handClick(e){
+      this.$emit('change',e.target.innerText)
+      // console.log(e.target.innerText)
+    }
+  }
 }
 </script>
 <style lang="stylus" scoped>
