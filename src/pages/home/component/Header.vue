@@ -50,11 +50,9 @@ export default {
       .icon-search
         margin-left .1rem
     .header-right
-      width 1.24rem
+      min-width 1.04rem
+      padding 0 .1rem
       float right 
       text-align center
       color #ffffff
-      overflow hidden
-      white-space nowrap
-      text-overflow ellipsis
 </style>
