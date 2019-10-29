@@ -43,7 +43,7 @@ export default {
   },
   methods:{
    hadClickCity(city){
-     this.$store.dispatch('changeCity',city)
+     this.$store.commit('changeCity',city)
      this.$router.push('/')
    }
   },
