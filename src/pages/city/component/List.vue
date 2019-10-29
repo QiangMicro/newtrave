@@ -6,7 +6,7 @@
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">北京</div>
+            <div class="button">{{this.$store.state.city}}</div>
           </div>
         </div>
       </div> 
@@ -14,7 +14,7 @@
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list" >
-          <div class="button-wrapper" v-for='item of hotCities' :key='item.id' >
+          <div class="button-wrapper" v-for='item of hotCities' :key='item.id' @click="hadClickCity(item.name)" >
             <div class="button">{{item.name}}</div>
           </div>         
         </div>
@@ -22,7 +22,7 @@
       <!-- 首写字母 -->
       <div class="area" v-for='(item,key) of cities' :key='key' :ref='key' >
         <div class="title border-topbottom" >{{key}}</div>
-        <div class="item-list" v-for='itemHtml of item' :key='itemHtml.id'>
+        <div class="item-list" v-for='itemHtml of item' :key='itemHtml.id'  @click="hadClickCity(itemHtml.name)" >
           <div class="item border-bottom">{{itemHtml.name}}</div>
         </div>
       </div>
@@ -41,6 +41,12 @@ export default {
   mounted(){
     this.scroll=new BScroll(this.$refs.wrapper)
   },
+  methods:{
+   hadClickCity(city){
+     this.$store.dispatch('changeCity',city)
+     this.$router.push('/')
+   }
+  },
   watch:{
     list(){
       // 如果侧列表传过值则同步到列表页的大写字母处
@@ -54,6 +60,7 @@ export default {
 </script>
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl';
+@import '~styles/mixins.styl';
   .border-topbottom
     &:before
       border-color #ccc
@@ -92,4 +99,5 @@ export default {
         line-height .76rem
         color #666
         padding-left .2rem
+        ellip()
 </style>

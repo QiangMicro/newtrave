@@ -32,8 +32,4 @@ export default {
       text-align center
       color $bgColor
       line-height .4rem
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/city-componests
 </style>
