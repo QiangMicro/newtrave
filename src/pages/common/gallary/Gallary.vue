@@ -1,6 +1,6 @@
 <template>
   <div>
-    1111111111111
+    0
   </div>
 </template>
 <script>
