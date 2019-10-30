@@ -7,7 +7,10 @@
     >
     <div class="banner-info">
       <div class="banner-title">深圳欢乐谷(AAAAA景区)</div>
-       <div class="banner-number"><span class="iconfont banner-icon">&#xe691;</span>51</div>
+       <div class="banner-number">
+         <span class="iconfont banner-icon">&#xe691;</span>
+         51
+        </div>
     </div>
   </div>
 </template>
