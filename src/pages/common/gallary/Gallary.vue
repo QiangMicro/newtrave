@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    
+  <div>
+    11111
   </div>
 </template>
 <script>
@@ -9,12 +9,5 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-  .container
-    z-index 99
-    position fixed
-    left 0
-    right 0
-    top 0
-    bottom 0
-    background red
+
 </style>
