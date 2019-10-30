@@ -1,22 +1,29 @@
 <template>
-  <div class="banner">
-    <img 
-      class="banner-img"
-      src='//img1.qunarzz.com/sight/p0/1910/6f/6f3fa8d8f8e14b66a3.water.jpg_600x330_c2bbb749.jpg' 
-      alt="欢乐谷"
-    >
-    <div class="banner-info">
-      <div class="banner-title">深圳欢乐谷(AAAAA景区)</div>
-       <div class="banner-number">
-         <span class="iconfont banner-icon">&#xe691;</span>
-         51
-        </div>
+  <div>
+    <div class="banner">
+      <img 
+        class="banner-img"
+        src='//img1.qunarzz.com/sight/p0/1910/6f/6f3fa8d8f8e14b66a3.water.jpg_600x330_c2bbb749.jpg' 
+        alt="欢乐谷"
+      >
+      <div class="banner-info">
+        <div class="banner-title">深圳欢乐谷(AAAAA景区)</div>
+        <div class="banner-number">
+          <span class="iconfont banner-icon">&#xe691;</span>
+          51
+          </div>
+      </div>
     </div>
+    <CommonGallary></CommonGallary>
   </div>
 </template>
 <script>
+import CommonGallary from 'commons/gallary/Gallary'
 export default {
-  name:'DetailBanner'
+  name:'DetailBanner',
+  components:{
+    CommonGallary
+  }
 }
 </script>
 <style lang="stylus" scoped>
@@ -36,7 +43,7 @@ export default {
       line-height .6rem
       color #ffffff
       padding 0 .2rem
-      background-image linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.8))
+      background-image  linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.8))
       .banner-title
         flex 1
         font-size .32rem
