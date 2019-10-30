@@ -6,8 +6,8 @@
       alt="欢乐谷"
     >
     <div class="banner-info">
-      <div class="banner-number">51</div>
       <div class="banner-title">深圳欢乐谷(AAAAA景区)</div>
+       <div class="banner-number">51</div>
     </div>
   </div>
 </template>
@@ -18,6 +18,7 @@ export default {
 </script>
 <style lang="stylus" scoped>
   .banner
+    position relative
     overflow hidden
     height 0
     padding-bottom 55%
@@ -30,12 +31,14 @@ export default {
       right 0
       bottom 0
       line-height .6rem
+      color #ffffff
+      padding 0 .2rem
       .banner-title
         flex 1
       .banner-number
-        padding 0 .4re
+        padding 0 .2rem
         height .4rem
         line-height .4rem
         border-radius .2rem
-        // background:#rgba(0,0,0,.8)
+        background rgba(0,0,0,.8)
 </style>
