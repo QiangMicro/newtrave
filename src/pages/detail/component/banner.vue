@@ -7,7 +7,11 @@
     >
     <div class="banner-info">
       <div class="banner-title">深圳欢乐谷(AAAAA景区)</div>
+<<<<<<< HEAD
        <div class="banner-number">51</div>
+=======
+       <div class="banner-number"><span class="iconfont banner-icon">&#xe691;</span>51</div>
+>>>>>>> origin/detail-banner
     </div>
   </div>
 </template>
@@ -33,12 +37,31 @@ export default {
       line-height .6rem
       color #ffffff
       padding 0 .2rem
+<<<<<<< HEAD
+=======
+      background-image linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.8))
+>>>>>>> origin/detail-banner
       .banner-title
         flex 1
+        font-size .32rem
+        padding 0 .2rem
       .banner-number
+<<<<<<< HEAD
         padding 0 .2rem
         height .4rem
         line-height .4rem
         border-radius .2rem
         background rgba(0,0,0,.8)
+=======
+        margin-top .2rem
+        padding 0 .2rem
+        height .32rem
+        line-height .32rem
+        border-radius .2rem
+        background rgba(0,0,0,.8)
+        font-size .24rem
+        .banner-icon
+          font-size .1rem
+          margin 0 .1rem 0 0
+>>>>>>> origin/detail-banner
 </style>
