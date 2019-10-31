@@ -11,7 +11,7 @@
         </router-link>
       </div>
     </div>
-    <div class="content"></div>
+    
   </div>
 </template>
 <script>
@@ -84,6 +84,5 @@ export default {
       text-align center
       font-size .4rem
       color #ffffff
-  .content
-    height 50rem
+ 
 </style>
