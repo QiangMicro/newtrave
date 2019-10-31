@@ -15,14 +15,17 @@
       </div>
     </div>
     <CommonGallary v-show='isshow' @showImage='showImage'></CommonGallary>
+    <CommonHeader></CommonHeader>
   </div>
 </template>
 <script>
 import CommonGallary from 'commons/gallary/Gallary'
+import CommonHeader from 'commons/gallary/Header'
 export default {
   name:'DetailBanner',
   components:{
-    CommonGallary
+    CommonGallary,
+    CommonHeader
   },
   data(){
     return{
