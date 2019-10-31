@@ -27,6 +27,7 @@ export default {
   },
   methods:{
     hadleScroll(){
+      console.log('scroll')
       const top=document.documentElement.scrollTop
       if(top>60){
         let opacity=top/140
@@ -40,6 +41,9 @@ export default {
   },
   activated(){
     window.addEventListener('scroll',this.hadleScroll)
+  },
+  deactivated(){
+    window.removeEventListener('scroll',this.hadleScroll)
   }
 }
 </script>
