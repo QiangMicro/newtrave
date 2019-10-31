@@ -8,7 +8,7 @@
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
       <div class="swiper-scrollbar"   slot="scrollbar"></div>
-  </swiper>
+    </swiper>
   </div>
 </template>
 <script>
