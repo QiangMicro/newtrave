@@ -1,18 +1,50 @@
 <template>
   <div>
-    <router-link tag="div" to='/' class="header-abs">
+    <router-link tag="div" to='/' class="header-abs" v-show='showAbs'>
       <span class="iconfont header-abs-back">&#xe658;</span>
     </router-link>
-    <div class="header-fixed"></div>
+    <div class="header-fixed" v-show='!showAbs' :style="opacityStyle">
+      <div class="header">
+        景点详情
+        <router-link to="/">
+          <div class="iconfont header-back">&#xe658;</div>
+        </router-link>
+      </div>
+    </div>
     <div class="content"></div>
   </div>
 </template>
 <script>
 export default {
-  name:'CommonHeader'
+  name:'CommonHeader',
+  data(){
+    return{
+      showAbs:true,
+      opacityStyle:{
+        opacity:0
+      }
+    }
+  },
+  methods:{
+    hadleScroll(){
+      const top=document.documentElement.scrollTop
+      if(top>60){
+        let opacity=top/140
+        opacity =opacity>1?1:opacity
+        this.opacityStyle={opacity}
+        this.showAbs=false
+      }else{
+        this.showAbs=true
+      }
+    }
+  },
+  activated(){
+    window.addEventListener('scroll',this.hadleScroll)
+  }
 }
 </script>
 <style lang="stylus" scoped>
+@import '~styles/varibles.styl';
   .header-abs
     position absolute
     left .2rem
@@ -26,6 +58,26 @@ export default {
     .header-abs-back
       color #ffffff
       font-size .4rem
+  .header
+    position fixed
+    top 0
+    right 0
+    left 0
+    overflow hidden
+    color #ffffff
+    text-align center
+    height $headerHeight
+    line-height $headerHeight
+    background $bgColor
+    font-size .3rem
+    .header-back
+      position absolute
+      top 0
+      left 0
+      width .64rem
+      text-align center
+      font-size .4rem
+      color #ffffff
   .content
     height 50rem
 </style>
