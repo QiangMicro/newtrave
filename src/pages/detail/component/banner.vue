@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="banner">
+    <div class="banner"  @click="changeShow" >
       <img 
         class="banner-img"
         src='//img1.qunarzz.com/sight/p0/1910/6f/6f3fa8d8f8e14b66a3.water.jpg_600x330_c2bbb749.jpg' 
@@ -14,7 +14,7 @@
           </div>
       </div>
     </div>
-    <CommonGallary></CommonGallary>
+    <CommonGallary v-show='isshow' @showImage='showImage'></CommonGallary>
   </div>
 </template>
 <script>
@@ -23,6 +23,19 @@ export default {
   name:'DetailBanner',
   components:{
     CommonGallary
+  },
+  data(){
+    return{
+      isshow:false
+    }
+  },
+  methods:{
+    changeShow(){
+      this.isshow=true
+    },
+    showImage(){
+      this.isshow=false
+    }
   }
 }
 </script>

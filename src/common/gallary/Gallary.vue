@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="wrapper">
+  <div class="container" @click="changeImge">
+    <div class="wrapper"  :options="swiperOptions" >
       <swiper >
         <swiper-slide>
           <img 
@@ -17,7 +17,7 @@
           >
         </swiper-slide>
         <!-- <div class="swiper-pagination"  slot="pagination"></div>
-        <div class="swiper-scrollbar"   slot="scrollbar"></div> -->
+         <div class="swiper-scrollbar"   slot="scrollbar"></div> -->
       </swiper>
     </div>
   </div>
@@ -25,11 +25,25 @@
 </template>
 <script>
 export default {
-  name:'CommonGallary'
+  name:'CommonGallary',
+  data(){
+    return{
+      swiperOptions:{
+        pagination: '.swiper-pagination',
+        observeParents:true,
+        observer:true
+      }
+    }
+  },
+  methods:{
+    changeImge(){
+      this.$emit('showImage')
+    }
+  }
 }
 </script>
 <style lang="stylus" scoped>
-  .container
+.container
     display flex
     flex-direction column
     justify-content center
@@ -47,4 +61,6 @@ export default {
       padding-bottom 100%
       .detail-image
         width 100%
+      .swiper-scrollbar
+        color #ffffff
 </style>
