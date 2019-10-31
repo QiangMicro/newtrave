@@ -27,6 +27,8 @@ export default {
   },
   methods:{
     hadleScroll(){
+      console.log('scroll');
+      
       const top=document.documentElement.scrollTop
       if(top>60){
         let opacity=top/140
@@ -38,8 +40,12 @@ export default {
       }
     }
   },
+  // 此事件绑定在window对象上，故在其它页面也会有影响，特在重新渲染页面后阻止此事件
   activated(){
     window.addEventListener('scroll',this.hadleScroll)
+  },
+  deactivated(){
+    window.removeEventListener('scroll',this.hadleScroll)
   }
 }
 </script>
