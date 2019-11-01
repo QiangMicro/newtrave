@@ -61,10 +61,12 @@ export default {
     line-height .6rem
     text-align center
     background rgba(0,0,0,.2)
+    z-index 98
     .header-abs-back
       color #ffffff
       font-size .4rem
   .header
+    z-index 99
     position fixed
     top 0
     right 0
