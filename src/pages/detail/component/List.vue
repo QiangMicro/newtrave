@@ -1,6 +1,6 @@
 <template>
   <div>
-    111111
+    递归组件
   </div>
 </template>
 <script>
